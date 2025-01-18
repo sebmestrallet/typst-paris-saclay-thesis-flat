@@ -1,18 +1,16 @@
 # for a description of available keys, see https://github.com/typst/packages/?tab=readme-ov-file#package-format
 
 [package]
-name = ""
+name = "paris-saclay-thesis-flat"
 version = "0.1.0"
 entrypoint = "src/lib.typ"
-authors = []
-license = "Unlicense"
-description = ""
-homepage = ""
-repository = ""
-keywords = []
-categories = []
+authors = ["Sébastien Mestrallet <@sebmestrallet>"]
+license = "MIT-0"
+description = "An unofficial, flat-design template for Paris-Saclay University theses"
+repository = "https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat"
+keywords = ["thesis", "Paris-Saclay"]
+categories = ["thesis"]
 disciplines = []
-compiler = ""
 exclude = [
 	".github",
 	"docs",
@@ -22,10 +20,8 @@ exclude = [
 	"Justfile",
 ]
 
-# [template]
-# path = "template"
-# entrypoint = "main.typ"
-# thumbnail = "thumbnail.png"
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
 
-# [tool.mytool]
-# foo = "bar"
