@@ -1,12 +1,53 @@
+// An highlighted empty rectangle for missing parameters
+#let empty-field(width: 10em) = box(
+  fill: rgb("#fffd11a1"), // default color of highlight() https://typst.app/docs/reference/text/highlight/#parameters-fill
+  width: width,
+  height: 1em,
+  baseline: 0.2em
+)
+
 // The function takes the whole document as `body` parameter
 // and formats it for a Paris-Saclay University thesis
 #let paris-saclay-thesis(
-  // The thesis title
-  title: "Titre de la thèse",
+
+  // The first and last names of the candidate
+  candidate-name: highlight[Prénom Nom],
+
+  // The thesis title in French
+  title-fr: highlight[Titre de la thèse],
+
+  // The translated thesis title in English
+  title-en: highlight[Title of the thesis],
+
+  // The national thesis number (NNT, Numéro National de Thèse)
+  NNT: highlight[XXXXXXXXXX],
+
+  // The line for the doctoral school number and name
+  doctoral-school: [École doctorale n°#empty-field(width: 3em) : #empty-field()],
+
+  // The line for the specialty
+  specialty: [Spécialité de doctorat : #empty-field()],
+
+  // The line for the graduate school
+  graduate-school: [Graduate School : #empty-field()],
+
+  // The line for the university component / associated university (référent)
+  university-component: [Référent : #empty-field()],
+
+  // The paragraph for the reseach unit and the PhD advisors
+  research-unit-and-advisors: [
+    Thèse préparée dans l'unité de recherche #empty-field(),\ sous la direction de #empty-field(), #highlight[titre du directeur de thèse],\ 
+    et l'encadrement de #empty-field(), #highlight[titre du co-endadrant].
+  ],
+
+  // The date of the PhD defense
+  defense-date: [#empty-field(width: 2em)/#empty-field(width: 2em)/#empty-field(width: 4em)],
 
   // The thesis content
   body
+
 ) = {
+
   set page("a4")
 
   set text(
@@ -54,7 +95,7 @@
             #text(
               fill: white,
             )[
-              NNT~:~XXXXXXXXXX
+              NNT~:~#NNT
             ]
           ]
         )
@@ -76,7 +117,7 @@
           size: 20pt,
           fill: prune,
         )[
-          #title
+          #title-fr
         ]\
         #v(2pt)
         // Segoe UI 12pt italic
@@ -85,7 +126,7 @@
           fill: black,
           style: "italic"
         )[
-          Traduction du titre de la thèse (sur plusieurs lignes si\ nécessaire)
+          #title-en
         ]\
 
         #v(40pt)
@@ -103,13 +144,12 @@
         #text(
           size: 10pt,
         )[
-          École doctorale n°XXX : #box(width: 20em, repeat("_"))\
-          Spécialité de doctorat : #box(width: 20em, repeat("_"))\
-          Graduate School : #box(width: 20em, repeat("_"))\ 
-          Référent : #box(width: 20em, repeat("_"))
+          #doctoral-school\
+          #specialty\
+          #graduate-school\ 
+          #university-component
           #v(10pt)
-          Thèse préparée dans l'unité de recherche *Nom de l'unité de recherche*,\ sous la direction de *Prénom Nom*, titre du directeur de thèse,\ 
-          et l'encadrement de *Prénom Nom*, titre du co-endadrant.
+          #research-unit-and-advisors
         ]
 
         #v(40pt)
@@ -118,7 +158,7 @@
         #text(
           size: 10pt,
         )[
-          *Thèse soutenue à Paris-Saclay, le \_\_/\_\_/\_\_\_\_, par* \
+          *Thèse soutenue à Paris-Saclay, le #defense-date, par* \
         ]
 
         // Segoe UI 20pt prune bold
@@ -127,7 +167,7 @@
           fill: prune,
           weight: 600,
         )[
-          Prénom Nom
+          #candidate-name
         ]
       ]
 
@@ -186,14 +226,14 @@
     stroke: 1pt+prune,
     [
       #set text(10pt)
-      *Titre :* #title\
+      *Titre :* #title-fr\
       *Mots-clés :* Mot-clé 1, Mot-clé 2, Mot-clés 3\
       #v(5pt)
       *Résumé :* #lorem(200)
     ],
     [
       #set text(10pt)
-      *Title :* Traduction du titre de la thèse\
+      *Title :* #title-en\
       *Mots-clés :* Keyword 1, Keyword 2, Keyword 3\
       #v(5pt)
       *Abstract :* #lorem(200)
