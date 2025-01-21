@@ -93,6 +93,15 @@
     ),
   ),
 
+  // Spacings in the first page
+  vertical-spacing-1: 15pt,
+  vertical-spacing-2: 55pt,
+  vertical-spacing-3: 40pt,
+  vertical-spacing-4: 40pt,
+  vertical-spacing-5: 60pt,
+  horizontal-spacing-1: 50pt,
+  horizontal-spacing-2: 100pt,
+
   // The thesis content
   body
 
@@ -153,11 +162,11 @@
     ],
     [ // right part of the grid
 
-      #v(15pt)
+      #v(vertical-spacing-1)
 
       #image("img/universite-paris-saclay.png", width: 25.4%*21cm)
 
-      #v(55pt)
+      #v(vertical-spacing-2)
 
       #align(
         right
@@ -179,7 +188,7 @@
           #title-en
         ]\
 
-        #v(40pt)
+        #v(vertical-spacing-3)
 
         // Segoe UI 12pt black bold
         #text(
@@ -187,9 +196,7 @@
         )[
           *Thèse de doctorat de l’université Paris-Saclay*
         ]
-
         #v(10pt)
-
         // Segoe UI 10pt black
         #text(
           size: 10pt,
@@ -202,7 +209,7 @@
           #research-unit-and-advisors
         ]
 
-        #v(40pt)
+        #v(vertical-spacing-4)
 
         // Segoe UI 12pt black bold
         #text(
@@ -221,10 +228,10 @@
         ]
       ]
 
-      #v(60pt)
+      #v(vertical-spacing-5)
 
       #grid(
-        columns: (50pt, auto),
+        columns: (horizontal-spacing-1, auto),
         row-gutter: 1em,
         stroke: (x,y) => if x == 1 and y == 1 { (left: (1pt + prune)) },
         [],
@@ -237,7 +244,8 @@
           // Segoe UI 10pt black, names in bold
           #set text(10pt)
           #grid(
-            columns: (250pt, auto),
+            columns: (auto, auto),
+            column-gutter: horizontal-spacing-2,
             inset: (x: 6pt, y: 3pt),
             align: horizon,
             ..for thesis-examiner in thesis-examiners {

@@ -1,9 +1,8 @@
 ///////////////////////////////////////////
 // 1. Replace
-//      #import "../src/lib.typ"
-//    (local development), with
-//      #import "@preview/paris-saclay-thesis-flat:0.1.0"
-//    (published package)
+//      #import "../src/lib.typ" // local development
+//    with
+//      #import "@preview/paris-saclay-thesis-flat:X.X.X" // use the latest published version
 /////////////////////////////////////////// 
 
 #import "../src/lib.typ": paris-saclay-thesis
@@ -57,6 +56,9 @@
       status: [Examinateur]
     ),
   ),
+  // You can also adjust spacings in the first page with
+  // `vertical-spacing-1` to `vertical-spacing-5`
+  // and `horizontal-spacing-1` to `horizontal-spacing-2`
 )
 
 #lorem(200)
