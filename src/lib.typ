@@ -1,3 +1,6 @@
+// The main color of the Paris-Saclay University visual identity
+#let prune = rgb(99, 0, 60)
+
 // Yellow background color for highlighting
 #let yellow-highlighting = rgb("#fffd11a1") // default color of highlight() https://typst.app/docs/reference/text/highlight/#parameters-fill
 
@@ -119,10 +122,9 @@
 
   set text(
     font: ("Segoe UI This"), // for tinymist to detect local fonts: set `["${workspaceFolder}/src/font"]` for `tinymist.fontPaths` in VS Code settings
-    size: 12pt
+    size: 12pt,
+    lang: "fr"
   )
-
-  let prune = rgb(99, 0, 60)
 
   let rectangle_width = 16.4%*21cm // 16.4% of the page width
 
