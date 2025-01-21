@@ -23,10 +23,32 @@
   graduate-school: [Graduate School : Physique],
   university-component: [Référent : Faculté des sciences d'Orsay],
   research-unit-and-advisors: [
-    Thèse préparée dans l'unité de recherche *Fondcombe*,\ sous la direction de *Elrond*, seigneur de Fondcombe,\ 
+    Thèse préparée dans l'unité de recherche *Fondcombe*,\ sous la direction d'*Elrond*, seigneur de Fondcombe,\ 
     et l'encadrement de *Gandalf*, magicien de l'ordre des Istari.
   ],
-  defense-date: [20/10/1955]
+  defense-date: [20/10/1955],
+  thesis-examiners: (
+    (
+      name: [*Aragorn*],
+      title: [Roi du Gondor],
+      status: [Président]
+    ),
+    (
+      name: [*Legolas*],
+      title: [Prince des Elfes Sylvains],
+      status: [Rapporteur &\ Examinateur]
+    ),
+    (
+      name: [*Gimli*],
+      title: [Guerrier du royaume d'Erebor],
+      status: [Rapporteur &\ Examinateur]
+    ),
+    (
+      name: [*Faramir*],
+      title: [Intendant du Gondor],
+      status: [Examinateur]
+    ),
+  ),
 )
 
 #lorem(200)

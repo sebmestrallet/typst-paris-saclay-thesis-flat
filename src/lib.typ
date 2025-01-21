@@ -43,6 +43,30 @@
   // The date of the PhD defense
   defense-date: [#empty-field(width: 2em)/#empty-field(width: 2em)/#empty-field(width: 4em)],
 
+  // The list of thesis examiners (rapporteurs and defense examiners)
+  thesis-examiners: (
+    (
+      name: empty-field(),
+      title: empty-field(width: 25em),
+      status: highlight[Président(e)]
+    ),
+    (
+      name: empty-field(),
+      title: empty-field(width: 25em),
+      status: highlight[Rapporteur &\ Examinateur/trice]
+    ),
+    (
+      name: empty-field(),
+      title: empty-field(width: 25em),
+      status: highlight[Rapporteur &\ Examinateur/trice]
+    ),
+    (
+      name: empty-field(),
+      title: empty-field(width: 25em),
+      status: highlight[Examinateur/trice]
+    ),
+  ),
+
   // The thesis content
   body
 
@@ -171,7 +195,7 @@
         ]
       ]
 
-      #v(80pt)
+      #v(60pt)
 
       #grid(
         columns: (50pt, auto),
@@ -190,17 +214,12 @@
             columns: (250pt, auto),
             inset: (x: 6pt, y: 3pt),
             align: horizon,
-            [*Prénom Nom*], grid.cell(rowspan: 2)[Président(e)],
-            text(size: 9pt)[Titre, affiliation],
-            [],[],
-            [*Prénom Nom*], grid.cell(rowspan: 2)[Rapporteur & Examinateur/trice],
-            text(size: 9pt)[Titre, affiliation],
-            [],[],
-            [*Prénom Nom*], grid.cell(rowspan: 2)[Rapporteur & Examinateur/trice],
-            text(size: 9pt)[Titre, affiliation],
-            [],[],
-            [*Prénom Nom*], grid.cell(rowspan: 2)[Examinateur/trice],
-            text(size: 9pt)[Titre, affiliation],
+            ..for thesis-examiner in thesis-examiners {
+              (thesis-examiner.name, grid.cell(rowspan: 2)[#thesis-examiner.status], text(size: 9pt)[#thesis-examiner.title])
+              if thesis-examiner != thesis-examiners.last() {
+                ([],[])
+              }
+            }
           )
         ],
       )
