@@ -71,7 +71,7 @@
   ],
 
   // The date of the PhD defense
-  defense-date: [#missing-field(width: 2em)/#missing-field(width: 2em)/#missing-field(width: 4em)],
+  defense-date: [#missing-field()],
 
   // The list of thesis examiners (rapporteurs and defense examiners)
   thesis-examiners: (

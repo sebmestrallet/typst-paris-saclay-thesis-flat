@@ -33,7 +33,7 @@
     Thèse préparée dans l'unité de recherche *Fondcombe*,\ sous la direction d'*Elrond*, seigneur de Fondcombe,\ 
     et l'encadrement de *Gandalf*, magicien de l'ordre des Istari.
   ],
-  defense-date: [20/10/1955],
+  defense-date: [20 octobre 1955],
   thesis-examiners: (
     (
       name: [*Aragorn*],
