@@ -238,10 +238,10 @@
 )
 
 ///////////////////////////////////////////
-// Write your thesis below. Good luck!
+// Write your thesis below. Bon courage !
 ///////////////////////////////////////////
 
-= Chapitre <chapitre>
+= Chapitre <ch:chapitre>
 
 #lorem(50)
 
@@ -255,16 +255,18 @@
   - #lorem(12)
 ]
 
-== Sous-chapitre <sous-chapitre>
+== Sous-chapitre <ch:sous-chapitre>
 
 #lorem(25)
 
-=== Sous-sous-chapitre <sous-sous-chapitre>
+=== Sous-sous-chapitre <ch:sous-sous-chapitre>
 
-#lorem(50)
+#lorem(50) @bib:concerning-hobbits
 
 #remarque[
   #lorem(25)
 ]
 
 #lorem(50)
+
+#bibliography("bib.yml", title: [Bibliographie])

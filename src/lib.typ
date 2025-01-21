@@ -299,7 +299,7 @@
     [
       #set text(10pt)
       *Title :* #title-en\
-      *Mots-clés :* #for keyword in keywords-en {
+      *Keywords :* #for keyword in keywords-en {
         (keyword)
         if keyword != keywords-en.last() {
           (", ")
