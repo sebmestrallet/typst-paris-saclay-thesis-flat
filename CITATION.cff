@@ -1,0 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: paris-saclay-thesis-flat
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Sébastien
+    family-names: Mestrallet
+    orcid: 'https://orcid.org/0000-0002-4519-2814'
+repository-code: >-
+  https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat
+abstract: >-
+  An unofficial, flat-design Typst template for Paris-Saclay
+  University theses
+keywords:
+  - thesis
+  - thesis-template
+  - phd-thesis
+  - phd-thesis-template
+  - paris-saclay
+  - typst
+  - typst-template
+license: MIT-0
+version: 0.1.0
