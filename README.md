@@ -1,6 +1,22 @@
 # The `paris-saclay-thesis-flat` Typst package
 
-An unofficial, flat-design Typst template for Paris-Saclay University theses 
+An unofficial, flat-design Typst template for Paris-Saclay University theses
+
+<p align="center">
+<img src="thumbnails/p1.png" alt="page 1 of an example thesis based on this template" width="49%">
+<img src="thumbnails/p2.png" alt="page 2 of an example thesis based on this template" width="49%">
+</p>
+
+<details>
+<summary>About the name</summary>
+
+- `typst-paris-saclay-thesis-flat` is the name of the GitHub repo, `paris-saclay-thesis-flat` is the name of the Typst template
+- The Typst template name does not contain `typst`, because it is redundant[^typst_template_naming]
+- The Typst template name is not just `paris-saclay-thesis`, because it is not an official template[^typst_template_naming]. I got rid of the white gradients in the vertical banner, so here is a flat-design version (was accepted by the university library for my thesis).
+
+[^typst_template_naming]: https://github.com/typst/packages?tab=readme-ov-file#submission-guidelines
+
+</details>
 
 ## Template adaptation checklist
 
