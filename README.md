@@ -2,6 +2,8 @@
 
 An unofficial, flat-design Typst template for Paris-Saclay University theses
 
+[![Maintenance Level: Actively Maintained](https://badgen.net/badge/Maintenance%20Level/Actively%20Maintained?color=97ca00)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
+
 <p align="center">
 <img src="thumbnails/p1.png" alt="page 1 of an example thesis based on this template" width="49%">
 <img src="thumbnails/p2.png" alt="page 2 of an example thesis based on this template" width="49%">
