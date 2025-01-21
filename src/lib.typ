@@ -1,10 +1,23 @@
+// Yellow background color for highlighting
+#let yellow-highlighting = rgb("#fffd11a1") // default color of highlight() https://typst.app/docs/reference/text/highlight/#parameters-fill
+
 // An highlighted empty rectangle for missing parameters
-#let empty-field(width: 10em) = box(
-  fill: rgb("#fffd11a1"), // default color of highlight() https://typst.app/docs/reference/text/highlight/#parameters-fill
+#let missing-field(width: 10em) = box(
+  fill: yellow-highlighting,
   width: width,
   height: 1em,
   baseline: 0.2em
 )
+
+#let missing-doctoral-school-logo = block(
+  height: 65pt,
+  width: 200pt,
+  fill: yellow-highlighting
+)[
+  #align(center+horizon)[
+    Logo de l'école doctorale
+  ]
+]
 
 // The function takes the whole document as `body` parameter
 // and formats it for a Paris-Saclay University thesis
@@ -19,50 +32,63 @@
   // The translated thesis title in English
   title-en: highlight[Title of the thesis],
 
+  // The keywords of the thesis subject, in French
+  keywords-fr: (highlight[Mot-clé 1], highlight[Mot-clé 2], highlight[Mot-clé 3]),
+
+  // The translated keywords of the thesis subject, in English
+  keywords-en: (highlight[Keyword 1], highlight[Keyword 2], highlight[Keyword 3]),
+
+  abstract-fr: highlight(lorem(200)),
+
+  abstract-en: highlight(lorem(200)),
+
   // The national thesis number (NNT, Numéro National de Thèse)
   NNT: highlight[XXXXXXXXXX],
 
   // The line for the doctoral school number and name
-  doctoral-school: [École doctorale n°#empty-field(width: 3em) : #empty-field()],
+  doctoral-school: [École doctorale n°#missing-field(width: 3em) : #missing-field()],
+
+  // The short code of the doctoral school. See images filename in ./img/
+  doctoral-school-code: none,
 
   // The line for the specialty
-  specialty: [Spécialité de doctorat : #empty-field()],
+  specialty: [Spécialité de doctorat : #missing-field()],
 
   // The line for the graduate school
-  graduate-school: [Graduate School : #empty-field()],
+  graduate-school: [Graduate School : #missing-field()],
 
   // The line for the university component / associated university (référent)
-  university-component: [Référent : #empty-field()],
+  university-component: [Référent : #missing-field()],
 
   // The paragraph for the reseach unit and the PhD advisors
   research-unit-and-advisors: [
-    Thèse préparée dans l'unité de recherche #empty-field(),\ sous la direction de #empty-field(), #highlight[titre du directeur de thèse],\ 
-    et l'encadrement de #empty-field(), #highlight[titre du co-endadrant].
+    Thèse préparée dans l'unité de recherche #missing-field(),\ sous la direction de #missing-field(), #highlight[titre du directeur de thèse],\ 
+    et l'encadrement de #missing-field(), #highlight[titre du co-endadrant].
   ],
 
   // The date of the PhD defense
-  defense-date: [#empty-field(width: 2em)/#empty-field(width: 2em)/#empty-field(width: 4em)],
+  defense-date: [#missing-field(width: 2em)/#missing-field(width: 2em)/#missing-field(width: 4em)],
 
   // The list of thesis examiners (rapporteurs and defense examiners)
   thesis-examiners: (
     (
-      name: empty-field(),
-      title: empty-field(width: 25em),
+      name: missing-field(),
+      title: missing-field(width: 25em),
       status: highlight[Président(e)]
     ),
     (
-      name: empty-field(),
-      title: empty-field(width: 25em),
+      name: missing-field(),
+      title: missing-field(width: 25em),
       status: highlight[Rapporteur &\ Examinateur/trice]
     ),
     (
-      name: empty-field(),
-      title: empty-field(width: 25em),
+      name: missing-field(),
+      title: missing-field(width: 25em),
       status: highlight[Rapporteur &\ Examinateur/trice]
     ),
     (
-      name: empty-field(),
-      title: empty-field(width: 25em),
+      name: missing-field(),
+      title: missing-field(width: 25em),
       status: highlight[Examinateur/trice]
     ),
   ),
@@ -233,7 +259,13 @@
 
   pagebreak()
 
-  image("img/STIC.png", width: 60%)
+  if doctoral-school-code == none {
+    missing-doctoral-school-logo
+  }
+  else {
+    assert(type(doctoral-school-code) == str)
+    image("img/" + doctoral-school-code + ".png", width: 60%)
+  }
 
   v(10pt)
 
@@ -246,16 +278,26 @@
     [
       #set text(10pt)
       *Titre :* #title-fr\
-      *Mots-clés :* Mot-clé 1, Mot-clé 2, Mot-clés 3\
+      *Mots-clés :* #for keyword in keywords-fr {
+        (keyword)
+        if keyword != keywords-fr.last() {
+          (", ")
+        }
+      }\
       #v(5pt)
-      *Résumé :* #lorem(200)
+      *Résumé :* #abstract-fr
     ],
     [
       #set text(10pt)
       *Title :* #title-en\
-      *Mots-clés :* Keyword 1, Keyword 2, Keyword 3\
+      *Mots-clés :* #for keyword in keywords-en {
+        (keyword)
+        if keyword != keywords-en.last() {
+          (", ")
+        }
+      }\
       #v(5pt)
-      *Abstract :* #lorem(200)
+      *Abstract :* #abstract-en
     ]
   )
 

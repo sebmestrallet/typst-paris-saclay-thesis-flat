@@ -10,15 +10,23 @@
 
 ///////////////////////////////////////////
 // 2. Change the value of the following
-//    parameters to edit the first two pages
+//    parameters to edit the first two pages.
+//    All parameters have a defaut value, so
+//    you can remove some to highlight which
+//    ones are still missing.
 /////////////////////////////////////////// 
 
 #show: paris-saclay-thesis.with(
   candidate-name: [Frodon Sacquet],
   title-fr: [Propriétés et conséquences psychiques, magiques et géopoliques du métal Au lorsque forgé en Anneau Unique],
   title-en: [Properties and psychic, magical and geopolitical consequences\ of Au metal when forged into the One Ring],
+  keywords-fr: ("Or", "montagne du Destin", "Magie occulte"),
+  keywords-en: ("Gold","Mount Doom", "Occult magic"),
+  abstract-fr: lorem(200),
+  abstract-en: lorem(200),
   NNT: [1955UPASX000],
   doctoral-school: [École doctorale n°573 : INTERFACES - approches interdisciplinaires,\ fondements, applications et innovation],
+  doctoral-school-code: "INTERFACES", // for the logo to insert
   specialty: [Spécialité de doctorat : Sciences des matériaux],
   graduate-school: [Graduate School : Physique],
   university-component: [Référent : Faculté des sciences d'Orsay],
