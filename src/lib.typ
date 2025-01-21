@@ -107,16 +107,8 @@
 
 ) = {
 
-  set page("a4")
-
-  set text(
-    font: ("Segoe UI This"), // for tinymist to detect local fonts: set `["${workspaceFolder}/src/font"]` for `tinymist.fontPaths` in VS Code settings
-    size: 12pt
-  )
-
-  let prune = rgb(99, 0, 60)
-
   set page(
+    paper: "a4",
     margin: (
       left: 0pt,
       top: 0pt,
@@ -124,6 +116,13 @@
       right: 2.5cm
     )
   )
+
+  set text(
+    font: ("Segoe UI This"), // for tinymist to detect local fonts: set `["${workspaceFolder}/src/font"]` for `tinymist.fontPaths` in VS Code settings
+    size: 12pt
+  )
+
+  let prune = rgb(99, 0, 60)
 
   let rectangle_width = 16.4%*21cm // 16.4% of the page width
 
