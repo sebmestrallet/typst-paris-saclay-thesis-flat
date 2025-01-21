@@ -12,6 +12,7 @@
   baseline: 0.2em
 )
 
+// An highlighted block for when the doctoral school logo is not selected
 #let missing-doctoral-school-logo = block(
   height: 65pt,
   width: 200pt,
@@ -101,7 +102,7 @@
   vertical-spacing-2: 55pt,
   vertical-spacing-3: 40pt,
   vertical-spacing-4: 40pt,
-  vertical-spacing-5: 60pt,
+  vertical-spacing-5: 40pt,
   horizontal-spacing-1: 50pt,
   horizontal-spacing-2: 100pt,
 
@@ -169,10 +170,7 @@
 
       #v(vertical-spacing-2)
 
-      #align(
-        right
-      )[
-        // Segoe UI 20pt prune
+      #align(right)[
         #text(
           size: 20pt,
           fill: prune,
@@ -180,9 +178,8 @@
           #title-fr
         ]\
         #v(2pt)
-        // Segoe UI 12pt italic
         #text(
-          size: 12pt,
+          size: 13pt,
           fill: black,
           style: "italic"
         )[
@@ -191,16 +188,15 @@
 
         #v(vertical-spacing-3)
 
-        // Segoe UI 12pt black bold
         #text(
+          size: 13pt,
           weight: 400,
         )[
           *Thèse de doctorat de l’université Paris-Saclay*
         ]
         #v(10pt)
-        // Segoe UI 10pt black
         #text(
-          size: 10pt,
+          size: 12pt,
         )[
           #doctoral-school\
           #specialty\
@@ -212,14 +208,12 @@
 
         #v(vertical-spacing-4)
 
-        // Segoe UI 12pt black bold
         #text(
-          size: 10pt,
+          size: 11pt,
         )[
           *Thèse soutenue à Paris-Saclay, le #defense-date, par* \
         ]
 
-        // Segoe UI 20pt prune bold
         #text(
           size: 20pt,
           fill: prune,
@@ -237,12 +231,11 @@
         stroke: (x,y) => if x == 1 and y == 1 { (left: (1pt + prune)) },
         [],
         [
-          #text(size: 14pt, fill: prune)[*Composition du jury*]\ // Segoe UI 14pt prune bold
-          #text(size: 11pt, fill: prune)[Membres du jury avec voix délibérative] // Segoe UI 11pt prune
+          #text(size: 14pt, fill: prune)[*Composition du jury*]\
+          #text(size: 11pt, fill: prune)[Membres du jury avec voix délibérative]
         ],
         [],
         [
-          // Segoe UI 10pt black, names in bold
           #set text(10pt)
           #grid(
             columns: (auto, auto),
