@@ -42,8 +42,10 @@
   // The translated keywords of the thesis subject, in English
   keywords-en: (highlight[Keyword 1], highlight[Keyword 2], highlight[Keyword 3]),
 
+  // Abstract of the thesis, in French
   abstract-fr: highlight(lorem(200)),
 
+  // Translated abstract of the thesis, in English
   abstract-en: highlight(lorem(200)),
 
   // The national thesis number (NNT, Numéro National de Thèse)

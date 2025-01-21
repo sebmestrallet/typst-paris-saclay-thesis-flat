@@ -18,7 +18,7 @@
 #show: paris-saclay-thesis.with(
   candidate-name: [Frodon Sacquet],
   title-fr: [Propriétés et conséquences psychiques, magiques et géopoliques du métal Au lorsque forgé en Anneau Unique],
-  title-en: [Properties and psychic, magical and geopolitical consequences\ of Au metal when forged into the One Ring],
+  title-en: [Properties and psychic, magical and geopolitical consequences of Au metal when forged into the One Ring],
   keywords-fr: ("Or", "montagne du Destin", "Magie occulte"),
   keywords-en: ("Gold","Mount Doom", "Occult magic"),
   abstract-fr: lorem(200),
