@@ -1,4 +1,4 @@
-#import "@preview/paris-saclay-thesis-flat:1.0.0": paris-saclay-thesis, prune
+#import "@preview/paris-saclay-thesis-flat:1.0.1": paris-saclay-thesis, prune
 
 ///////////////////////////////////////////
 // 1/2 Change the value of the following

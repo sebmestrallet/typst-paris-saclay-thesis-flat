@@ -5,8 +5,8 @@ An unofficial, flat-design Typst template for Paris-Saclay University theses
 [![Maintenance Level: Actively Maintained](https://badgen.net/badge/Maintenance%20Level/Actively%20Maintained?color=97ca00)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 
 <p align="center">
-<img src="thumbnails/p1.png" alt="page 1 of an example thesis based on this template" width="49%">
-<img src="thumbnails/p2.png" alt="page 2 of an example thesis based on this template" width="49%">
+<img src="https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/blob/main/thumbnails/p1.png?raw=true" alt="page 1 of an example thesis based on this template" width="49%">
+<img src="https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/blob/main/thumbnails/p2.png?raw=true" alt="page 2 of an example thesis based on this template" width="49%">
 </p>
 
 <details>
@@ -60,7 +60,7 @@ Some spacings are adjustable, see [`src/lib.typ`](src/lib.typ) for the complete 
 The template will initialize your package with a sample call to the `paris-saclay-thesis` function in a show rule. If you want to change an existing project to use this template, you can add a show rule like this at the top of your file:
 
 ```typst
-#import "@preview/paris-saclay-thesis-flat:1.0.0": paris-saclay-thesis // replace with the latest published version
+#import "@preview/paris-saclay-thesis-flat:1.0.1": paris-saclay-thesis
 
 #show: paris-saclay-thesis.with(
   candidate-name: [Frodon Sacquet],

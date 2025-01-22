@@ -22,6 +22,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [[1.0.1](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.1)]
+
+### Changed
+
+- Thumbnails are now `exclude`d from published packages, the README refers to distant ones
+
 ## [[1.0.0](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.0)]
 
 Initial release
