@@ -8,12 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details>
 <summary>Todo before publishing a release</summary>
 
-- [ ] Run [typos](https://github.com/crate-ci/typos)
-- [ ] Replace "unreleased" in this document with the next release version
-- [ ] Link this heading to `https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/<the-tag>`
-- [ ] Update the version number in the comments at the top of [`template/main.typ`](template/main.typ)
-- [ ] Update the version number in the [`README.md`](./README.md) "Configuration" section
-- [ ] Update the version number in [`CITATION.cff`](./CITATION.cff)
+1. Run [typos](https://github.com/crate-ci/typos)
+1. Update the version number in [`typst.toml`](./typst.toml)
+1. Package locally under the `@preview` prefix with `just install-preview`
+1. Update the `#import` line of [`template/main.typ`](template/main.typ) to target the new version
+1. Replace "Unreleased" in this document with the new version number
+1. Link this heading to `https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/<version-tag>`
+1. Update the version number in the [`README.md`](./README.md) "Configuration" section
+1. Update the version number in [`CITATION.cff`](./CITATION.cff)
+1. Commit, tag and push, to trigger the GitHub Action creating a branch in [`sebmestrallet/typst-packages`](https://github.com/sebmestrallet/typst-packages), from which a PR can be created against [`typst/packages`](https://github.com/typst/packages/)
 
 </details>
 
