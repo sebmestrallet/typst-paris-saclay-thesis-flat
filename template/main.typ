@@ -1,18 +1,11 @@
-///////////////////////////////////////////
-// 1. Replace
-//      #import "../src/lib.typ" // local development
-//    with
-//      #import "@preview/paris-saclay-thesis-flat:X.X.X" // use the latest published version
-/////////////////////////////////////////// 
-
-#import "../src/lib.typ": paris-saclay-thesis, prune
+#import "@preview/paris-saclay-thesis-flat:1.0.0": paris-saclay-thesis, prune
 
 ///////////////////////////////////////////
-// 2. Change the value of the following
-//    parameters to edit the first two pages.
-//    All parameters have a default value, so
-//    you can remove some to highlight which
-//    ones are still missing.
+// 1/2 Change the value of the following
+//     parameters to edit the first two pages.
+//     All parameters have a default value, so
+//     you can remove some to highlight which
+//     ones are still missing.
 /////////////////////////////////////////// 
 
 #show: paris-saclay-thesis.with(
@@ -62,10 +55,10 @@
 )
 
 ///////////////////////////////////////////
-// 3. Starting from here, the third page,
-//    no formatting is imposed.
-//    However here are some tweaks you
-//    might like.
+// 2/2 Starting from here, the third page,
+//     no formatting is imposed.
+//     However here are some tweaks you
+//     might like.
 ///////////////////////////////////////////
 
 // Switch to a serif font family, size 11

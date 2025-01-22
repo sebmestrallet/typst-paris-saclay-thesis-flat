@@ -124,7 +124,7 @@
   )
 
   set text(
-    font: ("Segoe UI This"), // for tinymist to detect local fonts: set `["${workspaceFolder}/src/font"]` for `tinymist.fontPaths` in VS Code settings
+    font: ("Segoe UI This"), // for tinymist to detect local fonts: set `["${workspaceFolder}/template/font"]` for `tinymist.fontPaths` in VS Code settings
     size: 12pt,
     lang: "fr"
   )

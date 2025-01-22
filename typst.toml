@@ -2,7 +2,7 @@
 
 [package]
 name = "paris-saclay-thesis-flat"
-version = "0.1.0"
+version = "1.0.0"
 entrypoint = "src/lib.typ"
 authors = ["Sébastien Mestrallet <@sebmestrallet>"]
 license = "MIT-0"

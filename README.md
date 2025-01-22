@@ -20,28 +20,6 @@ An unofficial, flat-design Typst template for Paris-Saclay University theses
 
 </details>
 
-## Template adaptation checklist
-
-- [x] Fill out `README.md`
-  - Change the `my-package` package name, including code snippets
-  - Check section contents and/or delete sections that don't apply
-- [x] Check and/or replace `LICENSE` by something that suits your needs
-- [x] Fill out `typst.toml`
-  - See also the [typst/packages README](https://github.com/typst/packages/?tab=readme-ov-file#package-format)
-- [x] Adapt Repository URLs in `CHANGELOG.md`
-  - Consider only committing that file with your first release, or removing the "Initial Release" part in the beginning
-- [x] Adapt or deactivate the release workflow in `.github/workflows/release.yml`
-  - to deactivate it, delete that file or remove/comment out lines 2-4 (`on:` and following)
-  - to use the workflow
-    - [x] check the values under `env:`, particularly `REGISTRY_REPO`
-    - [x] if you don't have one, [create a fine-grained personal access token](https://github.com/settings/tokens?type=beta) with [only Contents permission](https://stackoverflow.com/a/75116350/371191) for the `REGISTRY_REPO`
-    - [x] on this repo, create a secret `REGISTRY_TOKEN` (at `https://github.com/[user]/[repo]/settings/secrets/actions`) that contains the so created token
-
-    if configured correctly, whenever you create a tag `v...`, your package will be pushed onto a branch on the `REGISTRY_REPO`, from which you can then create a pull request against [typst/packages](https://github.com/typst/packages/)
-- [x] remove/replace the example test case
-- [x] (add your actual code)
-- [ ] remove this section from the README
-
 ## Usage
 
 <!-- from https://github.com/typst/templates/tree/main/charged-ieee -->
@@ -51,6 +29,8 @@ You can use this template in the [Typst web app](https://typst.app/) by clicking
 Alternatively, you can use the CLI to kick this project off using the command:
 ```bash
 typst init @preview/paris-saclay-thesis-flat
+cd paris-saclay-thesis-flat
+typst watch main.typ --font-path font
 ```
 
 Typst will create a new directory with all the files needed to get you started.
@@ -80,7 +60,7 @@ Some spacings are adjustable, see [`src/lib.typ`](src/lib.typ) for the complete 
 The template will initialize your package with a sample call to the `paris-saclay-thesis` function in a show rule. If you want to change an existing project to use this template, you can add a show rule like this at the top of your file:
 
 ```typst
-#import "@preview/paris-saclay-thesis-flat:X.X.X": paris-saclay-thesis // replace with the latest published version
+#import "@preview/paris-saclay-thesis-flat:1.0.0": paris-saclay-thesis // replace with the latest published version
 
 #show: paris-saclay-thesis.with(
   candidate-name: [Frodon Sacquet],
