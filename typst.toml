@@ -11,17 +11,19 @@ repository = "https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat"
 keywords = ["thesis", "Paris-Saclay"]
 categories = ["thesis"]
 disciplines = []
+compiler = "0.12.0"
 exclude = [
-	".github",
-	"docs",
-	"scripts",
-	"tests",
+	".github/",
+	"scripts/",
+	".gitignore",
 	".typstignore",
-	"Justfile",
+	"CHANGELOG.md",
+	"CITATION.cff",
+	"Justfile"
 ]
 
 [template]
-path = "template"
-entrypoint = "main.typ"
+path = "template/" # all files inside will be copied into the user's new project directory
+entrypoint = "main.typ" # compilation target
 thumbnail = "thumbnails/p1.png"
 
