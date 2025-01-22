@@ -10,7 +10,7 @@
 ///////////////////////////////////////////
 // 2. Change the value of the following
 //    parameters to edit the first two pages.
-//    All parameters have a defaut value, so
+//    All parameters have a default value, so
 //    you can remove some to highlight which
 //    ones are still missing.
 /////////////////////////////////////////// 
@@ -68,7 +68,7 @@
 //    might like.
 ///////////////////////////////////////////
 
-// Switch to a serif font familly, size 11
+// Switch to a serif font family, size 11
 
 #set text(
   font: "Libertinus Serif",
@@ -128,7 +128,7 @@
     #if header.numbering != none [ #number ]
     #upper(header.body)
   ]
-  v(heading_text_size.at(1)) // same heigh spacing as the font size
+  v(heading_text_size.at(1)) // same height spacing as the font size
 }
 #show heading.where(level: 2): header => {
   set text(
@@ -136,12 +136,12 @@
     font: "Segoe UI This",
     weight: "bold"
   )
-  v(heading_text_size.at(2)) // same heigh spacing as the font size
+  v(heading_text_size.at(2)) // same height spacing as the font size
   box()[
     #counter(heading).display()~
     #upper(header.body)
   ]
-  v(heading_text_size.at(2)) // same heigh spacing as the font size
+  v(heading_text_size.at(2)) // same height spacing as the font size
 }
 #show heading.where(level: 3): header => {
   set text(
@@ -149,13 +149,13 @@
     font: "Segoe UI This",
     weight: "bold"
   )
-  v(heading_text_size.at(3)) // same heigh spacing as the font size
+  v(heading_text_size.at(3)) // same height spacing as the font size
   box()[
     #h(10pt) // small indent
     #counter(heading).display()~
     #header.body
   ]
-  v(heading_text_size.at(3)) // same heigh spacing as the font size
+  v(heading_text_size.at(3)) // same height spacing as the font size
 }
 
 // Headings formatting in the outline

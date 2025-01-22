@@ -128,7 +128,7 @@ The template will initialize your package with a sample call to the `paris-sacla
 // Your content goes below.
 ```
 
-## Ressources
+## Resources
 
 - [Official MS Word & LaTeX templates](https://www.universite-paris-saclay.fr/recherche/doctorat-et-hdr/le-guide-de-la-soutenance-de-doctorat#Ressources) from the Paris-Saclay University
 

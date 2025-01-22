@@ -66,7 +66,7 @@
   // The line for the university component / associated university (référent)
   university-component: [Référent : #missing-field()],
 
-  // The paragraph for the reseach unit and the PhD advisors
+  // The paragraph for the research unit and the PhD advisors
   research-unit-and-advisors: [
     Thèse préparée dans l'unité de recherche #missing-field(),\ sous la direction de #missing-field(), #highlight[titre du directeur de thèse],\ 
     et l'encadrement de #missing-field(), #highlight[titre du co-endadrant].
