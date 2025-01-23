@@ -22,11 +22,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The [first thumbnail](./thumbnails/p1.png) (and only the first) is included in the Typst package. See [typst/packages#1610](https://github.com/typst/packages/pull/1610).
+
 ## [[1.0.1](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.1)]
 
 ### Changed
 
-- Thumbnails are now `exclude`d from published packages, the README refers to distant ones
+- Thumbnails are now `exclude`d from published packages, the README refers to distant ones. See [submission guidelines regarding the size](https://github.com/typst/packages/blob/c785a41613cd9e4257cb2b697f90894f84629a14/README.md#submission-guidelines) and the [PR template](https://github.com/typst/packages/blob/main/.github/pull_request_template.md).
 
 ## [[1.0.0](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.0)]
 

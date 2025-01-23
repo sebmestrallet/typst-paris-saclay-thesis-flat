@@ -10,7 +10,8 @@
 .github
 official-templates
 scripts
-thumbnails
+thumbnails/p2.png
+thumbnails/README.md
 .gitignore
 CHANGELOG.md
 CITATION.cff
