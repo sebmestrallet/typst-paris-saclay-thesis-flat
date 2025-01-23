@@ -30,10 +30,18 @@ Alternatively, you can use the CLI to kick this project off using the command:
 ```bash
 typst init @preview/paris-saclay-thesis-flat
 cd paris-saclay-thesis-flat
-typst watch main.typ --font-path font
 ```
 
-Typst will create a new directory with all the files needed to get you started.
+Then download the _Segoe UI This_ font, e.g. from [here](https://font.download/font/segoe-ui-this), and place the .ttf files e.g. in a `fonts/` subfolder.
+
+If you use the CLI, you must tell the binary where to look for additional fonts with the `--font-path` argument:
+```bash
+typst watch main.typ --font-path fonts
+```
+
+And if you use [VS Code](https://code.visualstudio.com/) and [tinymist](https://github.com/Myriad-Dreamin/tinymist), set `["${workspaceFolder}/fonts"]` for `tinymist.fontPaths` in VS Code settings.
+
+In the web app, [project fonts are automatically discovered](https://typst.app/docs/reference/text/text/#parameters-font).
 
 ## Configuration
 

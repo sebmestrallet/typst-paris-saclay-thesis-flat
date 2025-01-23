@@ -1,7 +1,12 @@
 #import "@preview/paris-saclay-thesis-flat:1.0.1": paris-saclay-thesis, prune
 
 ///////////////////////////////////////////
-// 1/2 Change the value of the following
+// 1/3 If not already done, download the
+//     "Segoe UI This" font (see README)
+/////////////////////////////////////////// 
+
+///////////////////////////////////////////
+// 2/3 Change the value of the following
 //     parameters to edit the first two pages.
 //     All parameters have a default value, so
 //     you can remove some to highlight which
@@ -55,7 +60,7 @@
 )
 
 ///////////////////////////////////////////
-// 2/2 Starting from here, the third page,
+// 3/3 Starting from here, the third page,
 //     no formatting is imposed.
 //     However here are some tweaks you
 //     might like.
@@ -221,9 +226,7 @@
   ]
 }
 
-///////////////////////////////////////////
 // Display the outline
-/////////////////////////////////////////// 
 
 #outline(
   title: [Table des matières],

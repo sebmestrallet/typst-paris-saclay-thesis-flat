@@ -26,6 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - The [first thumbnail](./thumbnails/p1.png) (and only the first) is included in the Typst package. See [typst/packages#1610](https://github.com/typst/packages/pull/1610).
 
+### Removed
+
+- The _Segoe UI This_ font must be downloaded independently. See [typst/packages#1610](https://github.com/typst/packages/pull/1610).
+
 ## [[1.0.1](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.1)]
 
 ### Changed

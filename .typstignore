@@ -8,6 +8,7 @@
 # .git and .typstignore are excluded automatically
 
 .github
+fonts
 official-templates
 scripts
 thumbnails/p2.png
