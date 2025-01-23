@@ -68,7 +68,7 @@ Some spacings are adjustable, see [`src/lib.typ`](src/lib.typ) for the complete 
 The template will initialize your package with a sample call to the `paris-saclay-thesis` function in a show rule. If you want to change an existing project to use this template, you can add a show rule like this at the top of your file:
 
 ```typst
-#import "@preview/paris-saclay-thesis-flat:1.0.1": paris-saclay-thesis
+#import "@preview/paris-saclay-thesis-flat:1.0.2": paris-saclay-thesis
 
 #show: paris-saclay-thesis.with(
   candidate-name: [Frodon Sacquet],

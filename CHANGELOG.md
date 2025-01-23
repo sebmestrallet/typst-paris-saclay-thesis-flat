@@ -12,8 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 1. Update the version number in [`typst.toml`](./typst.toml)
 1. Package locally under the `@preview` prefix with `just install-preview`
 1. Update the `#import` line of [`template/main.typ`](template/main.typ) to target the new version
-1. Replace "Unreleased" in this document with the new version number
-1. Link this heading to `https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/<version-tag>`
+1. Check that everything works (except the font) when starting a new project from this template with `typst init @preview/paris-saclay-thesis-flat:<version>`
+1. Here in the CHANGELOG, add a new heading after [Unreleased] with the new version number.
+   Link this heading to `https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/<version-tag>`
 1. Update the version number in the [`README.md`](./README.md) "Configuration" section
 1. Update the version number in [`CITATION.cff`](./CITATION.cff)
 1. Commit, tag and push, to trigger the GitHub Action creating a branch in [`sebmestrallet/typst-packages`](https://github.com/sebmestrallet/typst-packages), from which a PR can be created against [`typst/packages`](https://github.com/typst/packages/)
@@ -21,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 </details>
 
 ## [Unreleased]
+
+## [[1.0.2](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.2)]
 
 ### Changed
 
