@@ -120,6 +120,6 @@ The template will initialize your package with a sample call to the `paris-sacla
 
 - [Official MS Word & LaTeX templates](https://www.universite-paris-saclay.fr/recherche/doctorat-et-hdr/le-guide-de-la-soutenance-de-doctorat#Ressources) from the Paris-Saclay University
 
-# License
+## License
 
 [MIT-0](./LICENSE)
