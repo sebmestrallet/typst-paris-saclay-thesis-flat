@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [[1.0.2](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.2)]
+## [1.0.2] - 2025-01-23
 
 ### Changed
 
@@ -33,12 +33,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - The _Segoe UI This_ font must be downloaded independently. See [typst/packages#1610](https://github.com/typst/packages/pull/1610).
 
-## [[1.0.1](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.1)]
+## [1.0.1] - 2025-01-22
 
 ### Changed
 
 - Thumbnails are now `exclude`d from published packages, the README refers to distant ones. See [submission guidelines regarding the size](https://github.com/typst/packages/blob/c785a41613cd9e4257cb2b697f90894f84629a14/README.md#submission-guidelines) and the [PR template](https://github.com/typst/packages/blob/main/.github/pull_request_template.md).
 
-## [[1.0.0](https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.0)]
+## [1.0.0] - 2025-01-22
 
 Initial release
+
+[Unreleased]: https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat/releases/tag/v1.0.0
