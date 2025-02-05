@@ -13,6 +13,8 @@ authors:
     orcid: 'https://orcid.org/0000-0002-4519-2814'
 repository-code: >-
   https://github.com/sebmestrallet/typst-paris-saclay-thesis-flat
+url: >-
+  https://typst.app/universe/package/paris-saclay-thesis-flat/
 abstract: >-
   An unofficial, flat-design Typst template for Paris-Saclay
   University theses
